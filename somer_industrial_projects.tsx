@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   Menu, X, ChevronRight, Settings, Briefcase, ShoppingCart, 
   Search, ShieldCheck, Mail, Phone, MapPin, ArrowRight,
-  ExternalLink, Globe
+  ExternalLink, Globe, ArrowLeft, FileText, Lock
 } from 'lucide-react';
 
 const Header = ({ currentPage, setCurrentPage }) => {
@@ -93,7 +93,14 @@ const Header = ({ currentPage, setCurrentPage }) => {
   );
 };
 
-const Footer = () => {
+const Footer = ({ setCurrentPage }) => {
+  const handleLegalNav = (page) => {
+    if (setCurrentPage) {
+      setCurrentPage(page);
+      window.scrollTo(0, 0);
+    }
+  };
+
   return (
     <footer className="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,9 +137,30 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Accessibility & Legal</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">Terms of Service</a></li>
-              <li><a href="#" className="hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded">Accessibility Statement</a></li>
+              <li>
+                <button 
+                  onClick={() => handleLegalNav('privacy')}
+                  className="no-underline text-slate-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded text-left transition-colors"
+                >
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleLegalNav('terms')}
+                  className="no-underline text-slate-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded text-left transition-colors"
+                >
+                  Terms of Service
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleLegalNav('accessibility')}
+                  className="no-underline text-slate-300 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded text-left transition-colors"
+                >
+                  Accessibility Statement
+                </button>
+              </li>
             </ul>
           </div>
         </div>
@@ -852,6 +880,317 @@ const ContactPage = () => {
   );
 };
 
+const PrivacyPolicyPage = ({ setCurrentPage }) => {
+  return (
+    <main id="main-content" tabIndex="-1" className="focus:outline-none bg-slate-50 min-h-screen pb-20">
+      <div className="bg-slate-900 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block text-blue-400 text-sm font-semibold tracking-wider uppercase mb-3 bg-blue-950/60 px-3 py-1 rounded-full border border-blue-800">
+            Legal & Compliance
+          </span>
+          <h1 className="text-4xl font-extrabold text-white">Privacy Policy</h1>
+          <p className="mt-4 text-lg text-slate-300">
+            Last Updated: January 2026
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <button
+          onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }}
+          className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 mb-8 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1 transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Back to Home
+        </button>
+
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 sm:p-12 space-y-8 text-slate-700 leading-relaxed">
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">1. Introduction</h2>
+            <p>
+              Somer Industrial Projects (SIP) ("we", "our", or "us") respects your privacy and is committed to protecting your personal data. 
+              This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website 
+              or interact with our consulting, sourcing, and training services in accordance with the UK General Data Protection Regulation (UK GDPR) 
+              and the Data Protection Act 2018.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">2. Information We Collect</h2>
+            <p className="mb-3">We may collect and process the following categories of personal information:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Contact Information:</strong> Full name, business email address, phone number, and physical office location.</li>
+              <li><strong>Business & Inquiry Details:</strong> Information provided when submitting project inquiries, requesting training syllabi, or asking for procurement quotes.</li>
+              <li><strong>Technical & Usage Data:</strong> IP address, browser type, operating system, and interaction details collected automatically to optimize website performance.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">3. How We Use Your Information</h2>
+            <p className="mb-3">We use the collected information for legitimate business purposes, including:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Responding to commercial inquiries, training registrations, and technical consulting requests.</li>
+              <li>Facilitating international sourcing, equipment procurement, and logistics coordination.</li>
+              <li>Administering client relationships, contract fulfillment, and customer service.</li>
+              <li>Ensuring network security, fraud prevention, and compliance with statutory regulations.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">4. Information Sharing & Third Parties</h2>
+            <p>
+              We do not sell or lease your personal information to third parties. We may share relevant data with trusted partners 
+              (such as certified engineering contractors, training specialists, or logistics providers) strictly to fulfill agreed project deliverables 
+              under contractual confidentiality safeguards.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">5. Data Security & Retention</h2>
+            <p>
+              We maintain rigorous technical and organizational security measures to protect your data against unauthorized access, loss, or alteration. 
+              Personal data is retained only for as long as necessary to satisfy the purposes for which it was gathered, including legal, operational, and reporting requirements.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">6. Your Legal Rights</h2>
+            <p className="mb-3">Under data protection law, you have rights including:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>The right to access and receive a copy of your personal data.</li>
+              <li>The right to rectify inaccurate or incomplete records.</li>
+              <li>The right to request erasure ("right to be forgotten") under specific legal conditions.</li>
+              <li>The right to restrict or object to our processing of your personal data.</li>
+            </ul>
+          </section>
+
+          <section className="border-t border-slate-200 pt-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">7. Contact Our Privacy Team</h2>
+            <p>
+              If you have any questions, requests, or concerns regarding this Privacy Policy, please contact:
+            </p>
+            <div className="mt-3 p-4 bg-slate-50 rounded-xl border border-slate-200 text-sm">
+              <p className="font-semibold text-slate-900">Somer Industrial Projects (SIP)</p>
+              <p>Email: <a href="mailto:info@somerprojects.com" className="no-underline text-blue-600 hover:text-blue-800 font-medium">info@somerprojects.com</a></p>
+              <p>Tel: <a href="tel:+442087589843" className="no-underline text-blue-600 hover:text-blue-800 font-medium">+44 (0) 208 758 9843</a></p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  );
+};
+
+const TermsOfServicePage = ({ setCurrentPage }) => {
+  return (
+    <main id="main-content" tabIndex="-1" className="focus:outline-none bg-slate-50 min-h-screen pb-20">
+      <div className="bg-slate-900 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block text-blue-400 text-sm font-semibold tracking-wider uppercase mb-3 bg-blue-950/60 px-3 py-1 rounded-full border border-blue-800">
+            Terms & Conditions
+          </span>
+          <h1 className="text-4xl font-extrabold text-white">Terms of Service</h1>
+          <p className="mt-4 text-lg text-slate-300">
+            Last Updated: January 2026
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <button
+          onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }}
+          className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 mb-8 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1 transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Back to Home
+        </button>
+
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 sm:p-12 space-y-8 text-slate-700 leading-relaxed">
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">1. Agreement to Terms</h2>
+            <p>
+              By accessing and browsing the website of Somer Industrial Projects (SIP) at somerprojects.com or affiliated platforms, 
+              you agree to comply with and be bound by these Terms of Service, all applicable laws, and regulations. 
+              If you do not agree with any of these terms, you are prohibited from using or accessing this site.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">2. Advisory & Information Disclaimer</h2>
+            <p>
+              The materials and information on SIP's website are provided for general educational, training, and promotional informational purposes only. 
+              While we make every effort to keep content accurate and up to date, formal engineering consultancy, sourcing guarantees, 
+              and technical specifications are established solely through dedicated, signed commercial agreements and statement of works (SOW).
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">3. Intellectual Property Rights</h2>
+            <p>
+              All intellectual property rights, trademarks, technical curricula, text, graphics, logos, and digital designs displayed on this website 
+              are the proprietary property of Somer Industrial Projects or its licensed international partners. 
+              No portion of this site may be reproduced, copied, modified, or distributed for commercial purposes without prior written authorization.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">4. Permitted Use</h2>
+            <p className="mb-3">You agree to use this site strictly for lawful purposes. You shall not:</p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Engage in any automated data extraction, web scraping, or harvesting without explicit consent.</li>
+              <li>Introduce viruses, trojans, or malicious code that impairs system integrity or security.</li>
+              <li>Attempt to gain unauthorized access to servers, databases, or restricted administrative infrastructure.</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">5. Third-Party Links & Partner References</h2>
+            <p>
+              This website contains links to external websites operated by strategic partners and third-party organizations. 
+              SIP does not endorse, monitor, or accept liability for the content, privacy practices, or operational accuracy of external resources.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">6. Limitation of Liability</h2>
+            <p>
+              In no event shall Somer Industrial Projects, its directors, employees, or partners be liable for any indirect, 
+              incidental, consequential, or punitive damages resulting from the use or inability to use the informational materials on this site.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">7. Governing Law & Jurisdiction</h2>
+            <p>
+              These Terms of Service are governed by and construed in accordance with the laws of England and Wales. 
+              You irrevocably submit to the exclusive jurisdiction of the competent courts of England and Wales for the resolution of any disputes.
+            </p>
+          </section>
+
+          <section className="border-t border-slate-200 pt-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">8. Inquiries</h2>
+            <p>
+              For legal inquiries regarding these terms, please contact us at:
+            </p>
+            <div className="mt-3 p-4 bg-slate-50 rounded-xl border border-slate-200 text-sm">
+              <p className="font-semibold text-slate-900">Somer Industrial Projects (SIP)</p>
+              <p>Email: <a href="mailto:info@somerprojects.com" className="no-underline text-blue-600 hover:text-blue-800 font-medium">info@somerprojects.com</a></p>
+              <p>Tel: <a href="tel:+442087589843" className="no-underline text-blue-600 hover:text-blue-800 font-medium">+44 (0) 208 758 9843</a></p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  );
+};
+
+const AccessibilityStatementPage = ({ setCurrentPage }) => {
+  return (
+    <main id="main-content" tabIndex="-1" className="focus:outline-none bg-slate-50 min-h-screen pb-20">
+      <div className="bg-slate-900 py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="inline-block text-blue-400 text-sm font-semibold tracking-wider uppercase mb-3 bg-blue-950/60 px-3 py-1 rounded-full border border-blue-800">
+            Digital Inclusion
+          </span>
+          <h1 className="text-4xl font-extrabold text-white">Accessibility Statement</h1>
+          <p className="mt-4 text-lg text-slate-300">
+            Commitment to Accessible & Inclusive Digital Engineering
+          </p>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <button
+          onClick={() => { setCurrentPage('home'); window.scrollTo(0, 0); }}
+          className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 mb-8 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded p-1 transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Back to Home
+        </button>
+
+        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-8 sm:p-12 space-y-8 text-slate-700 leading-relaxed">
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">1. Our Commitment</h2>
+            <p>
+              Somer Industrial Projects (SIP) is committed to ensuring digital accessibility for individuals of all abilities, 
+              including persons with disabilities. We continually review and improve user experience for everyone, 
+              applying the relevant accessibility standards to make our information universally usable.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">2. Conformance Status</h2>
+            <p>
+              This website has been developed to adhere to the <strong>Web Content Accessibility Guidelines (WCAG) 2.1 Level AA</strong> standards. 
+              These guidelines explain how to make web content more accessible for people with disabilities, and user-friendly for all visitors.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">3. Key Accessibility Features Implemented</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+              <div className="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                <h3 className="font-bold text-slate-900 mb-2">Keyboard Navigation</h3>
+                <p className="text-sm text-slate-600">
+                  Full navigation support via keyboard (<kbd className="px-1.5 py-0.5 bg-white border border-slate-300 rounded text-xs font-mono">Tab</kbd>, <kbd className="px-1.5 py-0.5 bg-white border border-slate-300 rounded text-xs font-mono">Enter</kbd>, <kbd className="px-1.5 py-0.5 bg-white border border-slate-300 rounded text-xs font-mono">Space</kbd>) with clearly defined focus indicator rings.
+                </p>
+              </div>
+              <div className="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                <h3 className="font-bold text-slate-900 mb-2">Screen Reader Compatibility</h3>
+                <p className="text-sm text-slate-600">
+                  Semantic HTML5 elements, appropriate ARIA landmarks, and descriptive button/link labels for assistive software.
+                </p>
+              </div>
+              <div className="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                <h3 className="font-bold text-slate-900 mb-2">Color Contrast & Typography</h3>
+                <p className="text-sm text-slate-600">
+                  High-contrast text against backgrounds exceeding the WCAG 4.5:1 ratio for regular text to ensure effortless readability.
+                </p>
+              </div>
+              <div className="p-5 bg-slate-50 rounded-xl border border-slate-200">
+                <h3 className="font-bold text-slate-900 mb-2">Responsive & Zoom Support</h3>
+                <p className="text-sm text-slate-600">
+                  Fluid zoom capability up to 200% without horizontal scrolling or content degradation across all screen form factors.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">4. Skip Navigation</h2>
+            <p>
+              A dedicated "Skip to main content" link is located at the top of every page. When focused using the Tab key, 
+              keyboard and screen-reader users can bypass the primary navigation bar directly to the main content area.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">5. Continual Assessment</h2>
+            <p>
+              We routinely test our pages using automated accessibility auditing tools and manual assistive testing to ensure our technical 
+              improvements remain compliant with evolving accessibility guidelines.
+            </p>
+          </section>
+
+          <section className="border-t border-slate-200 pt-6">
+            <h2 className="text-2xl font-bold text-slate-900 mb-3">6. Feedback & Assistance</h2>
+            <p className="mb-3">
+              We welcome your feedback on the accessibility of the Somer Industrial Projects website. 
+              If you experience any accessibility barriers or require content in an alternative format, please contact us:
+            </p>
+            <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-sm">
+              <p className="font-semibold text-slate-900">Accessibility Liaison — SIP</p>
+              <p>Email: <a href="mailto:info@somerprojects.com" className="no-underline text-blue-600 hover:text-blue-800 font-medium">info@somerprojects.com</a></p>
+              <p>Tel: <a href="tel:+442087589843" className="no-underline text-blue-600 hover:text-blue-800 font-medium">+44 (0) 208 758 9843</a></p>
+              <p className="mt-2 text-slate-500">We aim to respond to accessibility inquiries within 2 business days.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  );
+};
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
@@ -873,6 +1212,12 @@ export default function App() {
         return <PartnersPage />;
       case 'contact':
         return <ContactPage />;
+      case 'privacy':
+        return <PrivacyPolicyPage setCurrentPage={setCurrentPage} />;
+      case 'terms':
+        return <TermsOfServicePage setCurrentPage={setCurrentPage} />;
+      case 'accessibility':
+        return <AccessibilityStatementPage setCurrentPage={setCurrentPage} />;
       default:
         return <HomePage setCurrentPage={setCurrentPage} />;
     }
@@ -894,7 +1239,7 @@ export default function App() {
         {renderPage()}
       </div>
 
-      <Footer />
+      <Footer setCurrentPage={setCurrentPage} />
     </div>
   );
 }
