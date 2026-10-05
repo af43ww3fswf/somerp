@@ -107,8 +107,24 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Quick Contact</h3>
             <ul className="space-y-2 text-sm">
-              <li className="flex items-center"><Mail size={16} className="mr-2 text-blue-500" aria-hidden="true"/> info@somerprojects.com</li>
-              <li className="flex items-center"><Phone size={16} className="mr-2 text-blue-500" aria-hidden="true"/> +44 (0) 208 758 9843</li>
+              <li className="flex items-center">
+                <Mail size={16} className="mr-2 text-blue-500 flex-shrink-0" aria-hidden="true"/>
+                <a 
+                  href="mailto:info@somerprojects.com" 
+                  className="no-underline text-slate-300 hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                >
+                  info@somerprojects.com
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Phone size={16} className="mr-2 text-blue-500 flex-shrink-0" aria-hidden="true"/>
+                <a 
+                  href="tel:+442087589843" 
+                  className="no-underline text-slate-300 hover:text-blue-400 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+                >
+                  +44 (0) 208 758 9843
+                </a>
+              </li>
             </ul>
           </div>
           <div>
@@ -695,8 +711,8 @@ const ContactPage = () => {
                   <Phone className="w-6 h-6 text-blue-400 mt-1 mr-4 flex-shrink-0" aria-hidden="true" />
                   <div>
                     <h3 className="font-semibold text-lg">United Kingdom Headquarters</h3>
-                    <p className="text-slate-300 mt-1">Tel/Fax: +44 (0) 208 758 9843</p>
-                    <p className="text-slate-300 mt-1">Mob: +44 (0) 783 754 0523</p>
+                    <p className="text-slate-300 mt-1">Tel/Fax: <a href="tel:+442087589843" className="no-underline text-inherit hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-blue-400 rounded">+44 (0) 208 758 9843</a></p>
+                    <p className="text-slate-300 mt-1">Mob: <a href="tel:+447837540523" className="no-underline text-inherit hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-blue-400 rounded">+44 (0) 783 754 0523</a></p>
                   </div>
                 </div>
 
@@ -704,7 +720,7 @@ const ContactPage = () => {
                   <MapPin className="w-6 h-6 text-blue-400 mt-1 mr-4 flex-shrink-0" aria-hidden="true" />
                   <div>
                     <h3 className="font-semibold text-lg">Iraq Regional Office</h3>
-                    <p className="text-slate-300 mt-1">Tel: +964 (0) 7818947447</p>
+                    <p className="text-slate-300 mt-1">Tel: <a href="tel:+9647818947447" className="no-underline text-inherit hover:text-white transition-colors focus:outline-none focus:ring-1 focus:ring-blue-400 rounded">+964 (0) 7818947447</a></p>
                   </div>
                 </div>
               </div>
@@ -800,8 +816,8 @@ const ContactPage = () => {
                   Primary hub for international partner coordination, European sourcing, contracts, and specialized curriculum development.
                 </p>
                 <div className="text-sm font-medium text-slate-700 space-y-1 border-t border-slate-100 pt-3">
-                  <p>Tel/Fax: +44 (0) 208 758 9843</p>
-                  <p>Mob: +44 (0) 783 754 0523</p>
+                  <p>Tel/Fax: <a href="tel:+442087589843" className="no-underline text-inherit hover:text-blue-600 transition-colors focus:outline-none focus:ring-1 focus:ring-blue-500 rounded">+44 (0) 208 758 9843</a></p>
+                  <p>Mob: <a href="tel:+447837540523" className="no-underline text-inherit hover:text-blue-600 transition-colors focus:outline-none focus:ring-1 focus:ring-blue-500 rounded">+44 (0) 783 754 0523</a></p>
                 </div>
               </div>
             </div>
@@ -824,8 +840,8 @@ const ContactPage = () => {
                   Dedicated in-country presence managing field engineering, local liaison, on-site technical training, and project delivery.
                 </p>
                 <div className="text-sm font-medium text-slate-700 space-y-1 border-t border-slate-100 pt-3">
-                  <p>Tel: +964 (0) 7818947447</p>
-                  <p>Email: info@somerprojects.com</p>
+                  <p>Tel: <a href="tel:+9647818947447" className="no-underline text-inherit hover:text-blue-600 transition-colors focus:outline-none focus:ring-1 focus:ring-blue-500 rounded">+964 (0) 7818947447</a></p>
+                  <p>Email: <a href="mailto:info@somerprojects.com" className="no-underline text-inherit hover:text-blue-600 transition-colors focus:outline-none focus:ring-1 focus:ring-blue-500 rounded">info@somerprojects.com</a></p>
                 </div>
               </div>
             </div>
