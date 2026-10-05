@@ -1,0 +1,34 @@
+# Somer Industrial Projects (SIP)
+
+> Somer Industrial Projects (SIP) is an independent engineering consultancy determined to help Middle Eastern Business through Strategy Consulting, Sourcing, and knowledge-based training.
+
+## Core Capabilities
+- **Engineering Services & Training:** Supporting international companies in executing complex engineering projects; specialized workshops in Distributed Control Systems (DCS), Flow Metering, Control Valves & Actuators, Refinery Operations (economics, feedstocks, planning), Control Systems, Building Management Systems (BMS), and HVAC.
+- **Business & Management:** Assessing industrial projects within commercial and financial context; training in Banking & Finance, Letters of Credit, Management (HR, PR, change management), and specialized English for Oil & Gas, Business, and Law.
+- **Procurement & Sourcing:** Sourcing vital machinery and automation systems including Instrumentation & Gauging Systems, Transmitters & Control Valves, Safety Relief Valves, Drilling Machineries, and Pipeline Equipment.
+- **Feasibility & Safety (HSE & IT):** Transitioning companies from exploration to production; certified Health, Safety & Environment (HSE) Training, risk assessment, and modern IT integration.
+
+## Key Industrial Sectors Served
+- Energy Utilities and Chemicals
+- Water and Effluent Treatment
+- Healthcare Infrastructure
+- IT Services & Industrial Automation
+- Security Services (CCTV, Fiber Optics, Surveillance)
+
+## International Strategic Partners
+- **Quantum Technologies:** Control and instrumentation engineering services, installation supervision, and commissioning.
+- **Ascendant Technologies Ltd.:** Specialist Valve Automation Centre for global Oil & Gas.
+- **National Safety Council (NSC):** Premier source for Safety, Health & Environmental (HSE) training and consultancy.
+- **IES:** Integrated automation provider (PLC, DCS, SCADA, telecommunications) across power generation, refineries, and cement plants.
+- **ATenergy:** E&P business development, exploration, and resource management consultancy.
+- **Skills2Learn:** Award-winning interactive e-learning and technology-based training solutions.
+- **Square Acre:** London procurement practice sourcing spares and machinery for Mining, Oil & Gas.
+- **Beehive Consulting Group:** Australian mechanical, electrical, and hydraulic consulting engineering.
+- **EWA Inc.:** British building management systems (BMS) specialist focusing on energy sustainability and engineering projects in Iraq.
+- **Seridium GmbH:** Swiss contracting company active in Piping Products, Power Products, and Metal Raw Materials.
+
+## Locations & Contact Information
+- **United Kingdom Corporate Headquarters:** London, UK | Tel/Fax: +44 (0) 208 758 9843 | Mob: +44 (0) 783 754 0523
+- **Iraq Regional Operations:** Baghdad, Iraq | Tel: +964 (0) 7818947447
+- **General Inquiries:** info@somerprojects.com
+- **Website:** https://af43ww3fswf.github.io/somerp/

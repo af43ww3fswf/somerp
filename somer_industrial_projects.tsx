@@ -178,28 +178,28 @@ const HomePage = ({ setCurrentPage }) => {
       title: "Engineering Services", 
       desc: "Expertise executing complex international engineering projects.", 
       icon: <Settings className="w-6 h-6 text-blue-700" />,
-      image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=800&q=80",
+      image: "./images/engineering-automation.jpg",
       alt: "Advanced engineering machinery and process automation systems"
     },
     { 
       title: "Sourcing Services", 
       desc: "Procurement of specialized equipment and automation systems.", 
       icon: <ShoppingCart className="w-6 h-6 text-blue-700" />,
-      image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80",
+      image: "./images/sourcing-procurement.jpg",
       alt: "Global industrial procurement, logistics, and equipment delivery"
     },
     { 
       title: "Feasibility Studies", 
       desc: "Strategic evaluation from exploration to full production.", 
       icon: <Search className="w-6 h-6 text-blue-700" />,
-      image: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
+      image: "./images/feasibility-pipeline-valves.jpg",
       alt: "Industrial plant engineering analysis, pipeline and valve design"
     },
     { 
       title: "Business Development", 
       desc: "Commercial assessments and financial context modeling.", 
       icon: <Briefcase className="w-6 h-6 text-blue-700" />,
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
+      image: "./images/business-development-training.jpg",
       alt: "Executive business strategy meeting and commercial project evaluation"
     },
   ];
@@ -211,7 +211,7 @@ const HomePage = ({ setCurrentPage }) => {
         <div className="absolute inset-0">
           <img
             className="w-full h-full object-cover"
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000"
+            src="./images/hero-engineering-consulting.jpg"
             alt="Engineers reviewing plans in an industrial facility"
           />
           <div className="absolute inset-0 bg-slate-900/75" aria-hidden="true"></div>
@@ -336,7 +336,7 @@ const HomePage = ({ setCurrentPage }) => {
             <div className="relative">
               <div className="relative rounded-2xl shadow-xl overflow-hidden aspect-[4/3]">
                 <img
-                  src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80"
+                  src="./images/refinery-operations-execution.jpg"
                   alt="Industrial petrochemical refinery and processing facilities illuminated at dusk"
                   className="w-full h-full object-cover"
                 />
@@ -361,7 +361,7 @@ const ServicesPage = () => {
     {
       title: "Engineering Services & Training",
       icon: <Settings className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=800&q=80",
+      image: "./images/services-engineering-dcs.jpg",
       alt: "Industrial control system engineering and automation operations",
       desc: "Assisting international companies to execute engineering projects by providing local expertise and targeted technical training.",
       items: [
@@ -376,7 +376,7 @@ const ServicesPage = () => {
     {
       title: "Business & Management",
       icon: <Briefcase className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
+      image: "./images/business-development-training.jpg",
       alt: "Executive business management training and financial consultation",
       desc: "Assessing projects in commercial and financial contexts, ensuring viable execution and professional development.",
       items: [
@@ -390,7 +390,7 @@ const ServicesPage = () => {
     {
       title: "Procurement & Sourcing",
       icon: <ShoppingCart className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80",
+      image: "./images/feasibility-pipeline-valves.jpg",
       alt: "High-spec industrial pipeline valves, gauges and drilling machinery",
       desc: "Sourcing vital equipment and automation systems for industrial applications.",
       items: [
@@ -404,7 +404,7 @@ const ServicesPage = () => {
     {
       title: "Feasibility & Safety (HSE & IT)",
       icon: <ShieldCheck className="w-6 h-6 text-white" />,
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
+      image: "./images/services-hse-safety.jpg",
       alt: "Health, Safety & Environment safety engineer conducting field inspection",
       desc: "Supporting companies in transition from exploration to production, ensuring safety and modern infrastructure.",
       items: [
@@ -422,7 +422,7 @@ const ServicesPage = () => {
       <div className="relative bg-slate-900 py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-25">
           <img
-            src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1600&q=80"
+            src="./images/engineering-automation.jpg"
             alt=""
             aria-hidden="true"
             className="w-full h-full object-cover"
@@ -490,27 +490,27 @@ const PartnersPage = () => {
   const sectors = [
     {
       title: "Energy Utilities & Chemicals",
-      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80",
+      image: "./images/sector-energy-utilities.jpg",
       alt: "Energy utilities, power generation and chemical operations"
     },
     {
       title: "Water & Effluent Treatment",
-      image: "https://images.unsplash.com/photo-1541888946425-d0fbb186c5f8?auto=format&fit=crop&w=800&q=80",
+      image: "./images/sector-water-treatment.jpg",
       alt: "Industrial water treatment and environmental effluent processing"
     },
     {
       title: "Healthcare",
-      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80",
+      image: "./images/sector-healthcare.jpg",
       alt: "Modern hospital infrastructure and healthcare facilities"
     },
     {
       title: "IT Services",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+      image: "./images/sector-it-infrastructure.jpg",
       alt: "Industrial IT telecommunications and server data systems"
     },
     {
       title: "Security Services (CCTV, Fiber Optics)",
-      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
+      image: "./images/sector-security-cctv.jpg",
       alt: "CCTV surveillance monitoring and high-speed fiber optic infrastructure"
     }
   ];
@@ -584,7 +584,7 @@ const PartnersPage = () => {
       <div className="relative bg-slate-900 py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-25">
           <img
-            src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80"
+            src="./images/feasibility-pipeline-valves.jpg"
             alt=""
             aria-hidden="true"
             className="w-full h-full object-cover"
@@ -694,7 +694,7 @@ const ContactPage = () => {
       <div className="relative bg-slate-900 py-20 overflow-hidden">
         <div className="absolute inset-0 opacity-25">
           <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80"
+            src="./images/hub-uk-london.jpg"
             alt=""
             aria-hidden="true"
             className="w-full h-full object-cover"
@@ -829,7 +829,7 @@ const ContactPage = () => {
             <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
               <div className="h-52 w-full overflow-hidden relative">
                 <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                  src="./images/hub-uk-london.jpg"
                   alt="London United Kingdom corporate and international liaison headquarters"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -853,7 +853,7 @@ const ContactPage = () => {
             <div className="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
               <div className="h-52 w-full overflow-hidden relative">
                 <img
-                  src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=800&q=80"
+                  src="./images/hub-middle-east-iraq.jpg"
                   alt="Middle East regional office and in-country industrial operations"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -1194,11 +1194,50 @@ const AccessibilityStatementPage = ({ setCurrentPage }) => {
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
 
-  // Handle focus management for accessibility when route changes
+  // Handle focus management and SEO title/description updates when route changes
   useEffect(() => {
     const mainContent = document.getElementById('main-content');
     if (mainContent) {
       mainContent.focus();
+    }
+
+    const seoMeta = {
+      home: {
+        title: "Somer Industrial Projects (SIP) | Engineering Consultancy, Sourcing & Training",
+        description: "Independent engineering consultancy providing strategy consulting, specialized equipment sourcing, feasibility studies, and certified technical training in the UK and Middle East."
+      },
+      services: {
+        title: "Engineering Services, Training & Sourcing | Somer Industrial Projects",
+        description: "Technical training in DCS, SCADA, refinery operations, HVAC, alongside international procurement, equipment sourcing, and HSE safety feasibility studies."
+      },
+      partners: {
+        title: "Strategic Partners & Core Sectors | Somer Industrial Projects",
+        description: "Trusted global partners including Quantum Technologies, Ascendant Technologies, NSC, IES, ATenergy, Skills2Learn, Square Acre, Beehive, EWA, and Seridium."
+      },
+      contact: {
+        title: "Contact Somer Industrial Projects | London UK & Middle East Offices",
+        description: "Get in touch with Somer Industrial Projects for industrial engineering inquiries, equipment procurement, and professional training programs."
+      },
+      privacy: {
+        title: "Privacy Policy | Somer Industrial Projects",
+        description: "Our commitment to protecting your personal data in accordance with UK GDPR and the Data Protection Act 2018."
+      },
+      terms: {
+        title: "Terms of Service | Somer Industrial Projects",
+        description: "Terms and conditions governing the use of Somer Industrial Projects' website and technical services."
+      },
+      accessibility: {
+        title: "Accessibility Statement | Somer Industrial Projects",
+        description: "WCAG 2.1 Level AA digital accessibility statement and inclusive design practices for all users."
+      }
+    };
+
+    const currentMeta = seoMeta[currentPage] || seoMeta.home;
+    document.title = currentMeta.title;
+
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', currentMeta.description);
     }
   }, [currentPage]);
 
